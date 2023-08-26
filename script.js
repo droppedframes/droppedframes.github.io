@@ -1,5 +1,26 @@
 const dynamicText = document.querySelector("h1 span");
-const words = ["configuring settings...", "troubleshooting errors...", "installing patches...","automating tasks...", "digging through logs...", "monitoring deployment...", "taking a nap...", "securing ports...", "checking backups...", "validating mapping...", "analyzing data...", "restarting servers...", "writing documentation...", "collaborating...", "implementing...", "planning release...", "coordinating specifications...", "testing...",  "eating...."];
+const words = [
+    "configuring settings...",
+    "troubleshooting errors...",
+    "installing patches...",
+    "automating tasks...",
+    "scouring logs...",
+    "monitoring KPIs...",
+    "taking a nap...",
+    "deploying updates...",
+    "securing ports...",
+    "checking backups...",
+    "validating mapping...",
+    "parsing data...",
+    "restarting servers...",
+    "writing documentation...",
+    "collaborating...",
+    "implementing changes...",
+    "testing changes...",
+    "eating snack...",
+    "training users..."
+];
+
 
 // Variables to track the position and deletion status of the word
 let wordIndex = 0;
@@ -20,7 +41,7 @@ const typeEffect = () => {
     } else if (isDeleting && charIndex > 0) {
         // If condition is true, remove the previous character
         charIndex--;
-        setTimeout(typeEffect, 25);
+        setTimeout(typeEffect, 10);
     } else {
         // If word is deleted then switch to the next word
         isDeleting = !isDeleting;
